@@ -8,6 +8,11 @@ function hideLinks() {
 }
 
 document.querySelector("a.breakout-link")?.addEventListener("click", () => {
+  const container = document.getElementById(
+    "canvas-container",
+  ) as HTMLDivElement
+  container.classList.remove("hidden")
+
   hideLinks()
   run2DBreakout()
 })
